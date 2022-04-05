@@ -13,8 +13,18 @@
 # and
 #   about_triangle_project_2.rb
 #
-def triangle(a, b, c)
-  # WRITE THIS CODE
+def triangle(x, y, z)
+  if x<=0 && y<=0 && z<=0
+    raise TriangleError, "all values should be greater than 0"
+  elsif x>=y+z || y>=x+z || z>=x+y
+    raise TriangleError, "that is not a triangle"
+  elsif x==y && y==z && z==x
+    result = :equilateral 
+  elsif x!=y && y!=z && z!=x
+  result = :scalene
+  else
+  result = :isosceles 
+  end
 end
 
 # Error class used in part 2.  No need to change this code.
