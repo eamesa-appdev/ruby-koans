@@ -30,6 +30,9 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 # Your goal is to write the score method.
 
 def score(dice)
+  dice.tally # tally the number of rolls on each dice...turn into a hash and read the keys 
+  
+  
   # You need to write this method
 end
 
